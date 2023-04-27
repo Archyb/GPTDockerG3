@@ -2,7 +2,9 @@ import openai
 from rest_framework.templatetags.rest_framework import data
 from django.http import JsonResponse
 
-openai.api_key = "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"
+Q = "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"
+
+openai.api_key = "%s" % Q
 
 
 def OpenChat(request):
