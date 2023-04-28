@@ -1,10 +1,10 @@
+import os
+
 import openai
 from rest_framework.templatetags.rest_framework import data
 from django.http import JsonResponse
-
-Q = "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"
-
-openai.api_key = "%s" % Q
+from dotenv import load_dotenv
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 def OpenChat(request):
